@@ -1,6 +1,14 @@
 export type CategoryKey = 'gesundheit' | 'karriere' | 'finanzen' | 'beziehungen' | 'persoenliche_entwicklung' | 'freizeit' | 'umfeld_wohnen' | 'beitrag_gesellschaft';
+export interface ImageAsset {
+    id: string;
+    url: string;
+    filename: string;
+    caption?: string;
+    createdAt: string;
+}
 export interface CategoryEntryInput {
     notes: string;
+    images?: ImageAsset[];
 }
 export interface Moment {
     id: string;

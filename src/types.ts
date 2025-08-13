@@ -8,8 +8,17 @@ export type CategoryKey =
   | 'umfeld_wohnen'
   | 'beitrag_gesellschaft';
 
+export interface ImageAsset {
+  id: string;
+  url: string; // public URL under /uploads
+  filename: string;
+  caption?: string;
+  createdAt: string;
+}
+
 export interface CategoryEntryInput {
   notes: string; // Freitext-Antworten des Nutzers
+  images?: ImageAsset[]; // Bilder je Bereich
 }
 
 export interface Moment {
